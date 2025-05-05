@@ -12,6 +12,9 @@ import {
 
 const token_verify_webhook = process.env.TOKEN_VERIFY_WEBHOOK;
 
+console.log("token_verify_webhook:", token_verify_webhook);
+
+
 dotenv.config();
 // const WEBHOOK_VERIFY_TOKEN = process.env.ACCESS_PERMANENT_TOKEN_AGENT_TEST_WSP;
 export const WEBHOOK_VERIFY_TOKEN =
@@ -55,8 +58,7 @@ app.post("/webhook", async (req, res) => {
   const messages = req.body.entry[0]?.changes[0]?.value?.messages;
   if (!messages || messages.length <= 0) {
     console.error('El mensaje recibido no tiene el formato esperado o no contiene mensajes.');
-    res.end()
-    return
+    
     res.sendStatus(400).end(); // Bad Request
     return;
   }
