@@ -12,7 +12,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    
     "@langchain/community": "^0.3.3",
     "@langchain/core": "^0.3.42",
     "@langchain/deepseek": "^0.0.1",
@@ -23,11 +22,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
-    
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.15.3",
     "tsx": "^4.19.2"
   }
 }
