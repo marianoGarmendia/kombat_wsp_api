@@ -27,6 +27,17 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(conversationRouter);
 
+
+// app.post("/agent", (req, res) => {
+
+//   console.log("agent body:");
+//   console.log(req.body);
+  
+//   // res.end();
+//   res.sendStatus(200).end();
+
+// })
+
 app.get("/webhook", (req, res) => {
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"]; // este es un token que lo definimos nosotros para validar en el backend ,puede ser cualquier palabra
